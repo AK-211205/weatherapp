@@ -1,23 +1,4 @@
-// /** @format */
 
-// export function getDayOrNightIcon(
-//     iconName: string,
-//     dateTimeString: string
-//   ): string {
-//     const hours = new Date(dateTimeString).getHours(); // Get hours from the given date and time string
-  
-//     const isDayTime = hours >= 6 && hours < 18; // Consider daytime from 6 AM to 6 PM
-  
-//     return isDayTime ? iconName.replace(/.$/, "d") : iconName.replace(/.$/, "n");
-//   }
-
-
-/**
- * Converts Open-Meteo weather codes to appropriate day/night icons
- * @param code Open-Meteo WMO weather code (0-99)
- * @param dateTimeString ISO date string for determining day/night
- * @returns Icon name matching our local weather icons
- */
 export function getDayOrNightIcon(
   code: number,
   dateTimeString: string
