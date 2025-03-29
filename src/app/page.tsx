@@ -681,9 +681,6 @@ import { format } from "date-fns";
 import { useQuery } from "react-query";
 import { loadingCityAtom, placeAtom, coordinatesAtom } from "./atom";
 import { useAtom } from "jotai";
-import { useEffect, useState } from "react";
-import { log } from "console";
-
 interface WeatherData {
   latitude: number;
   longitude: number;
@@ -715,7 +712,7 @@ interface WeatherData {
 }
 
 export default function Home() {
-  const [place, setPlace] = useAtom(placeAtom);
+  const [place] = useAtom(placeAtom);
   const [coordinates, setCoordinates] = useAtom(coordinatesAtom);
   const [loadingCity] = useAtom(loadingCityAtom);
 
