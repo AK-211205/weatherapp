@@ -83,8 +83,13 @@ type WeatherIconProps = React.HTMLProps<HTMLDivElement> & {
   iconName: string;
   size?: number;
 };
+interface WeatherIconComponentProps extends React.SVGAttributes<SVGElement> {
+  size?: number | string;
+  title?: string;
+}
 
-const iconComponents: Record<string, React.ComponentType> = {
+
+const iconComponents: Record<string, React.ComponentType<WeatherIconComponentProps>> = {
   'clear-day': WiDaySunny,
   'clear-night': WiNightClear,
   'partly-cloudy-day': WiDayCloudy,
